@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray-Ly-Car | Location de Voitures Premium</title>
+    <meta name="description" content="Ray-Ly-Car - Louez la voiture de vos rêves. Flotte premium, tarifs compétitifs, service 24/7. Réservez en ligne dès maintenant.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-car-side"></i>
+                <span>Ray-Ly-<strong>Car</strong></span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Accueil</a>
+                <a href="#fleet" class="nav-link">Véhicules</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#process" class="nav-link">Comment ça marche</a>
+                <a href="#testimonials" class="nav-link">Avis</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:+212630432323" class="nav-phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>06 30 43 23 23</span>
+                </a>
+                <a href="#booking" class="btn btn-primary">Réserver</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-star"></i> N°1 de la location de voitures premium
+                </span>
+                <h1>Conduisez <span class="highlight">l'excellence</span><br>à chaque kilomètre</h1>
+                <p class="hero-subtitle">
+                    Découvrez notre flotte de véhicules haut de gamme. Que ce soit pour un voyage d'affaires, 
+                    des vacances en famille ou une escapade en ville, Ray-Ly-Car vous accompagne avec style.
+                </p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Assurance tous risques</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Service 24h/24 - 7j/7</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-gas-pump"></i>
+                        <span>Kilométrage illimité</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Widget -->
+            <div class="booking-widget" id="booking">
+                <h3><i class="fa-solid fa-calendar-check"></i> Réservez votre véhicule</h3>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-location-dot"></i> Lieu de prise en charge</label>
+                            <select required>
+                                <option value="">Sélectionnez un lieu</option>
+                                <option>Agence Centre-ville</option>
+                                <option>Aéroport International</option>
+                                <option>Gare Centrale</option>
+                                <option>Livraison à domicile</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-location-dot"></i> Lieu de restitution</label>
+                            <select required>
+                                <option value="">Même lieu</option>
+                                <option>Agence Centre-ville</option>
+                                <option>Aéroport International</option>
+                                <option>Gare Centrale</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-calendar"></i> Date de prise</label>
+                            <input type="date" required id="pickupDate">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-calendar"></i> Date de retour</label>
+                            <input type="date" required id="returnDate">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fa-regular fa-clock"></i> Heure de prise</label>
+                            <input type="time" required value="10:00">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-car"></i> Catégorie</label>
+                            <select>
+                                <option value="">Toutes catégories</option>
+                                <option>Économique</option>
+                                <option>Berline</option>
+                                <option>SUV</option>
+                                <option>Luxe</option>
+                                <option>Utilitaire</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fa-solid fa-magnifying-glass"></i> Rechercher un véhicule
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero-stats">
+            <div class="container stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">+ Véhicules disponibles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1500">0</span>
+                    <span class="stat-label">+ Clients satisfaits</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-label">+ Années d'expérience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-label">h/24 Service client</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ POPULAR CARS ============ -->
+    <section class="section popular-cars" id="popular">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Véhicules en vedette</span>
+                <h2>Nos voitures les plus <span class="highlight">populaires</span></h2>
+                <p class="section-desc">Découvrez notre sélection de véhicules préférés par nos clients.</p>
+            </div>
+
+            <div class="cars-grid" id="popularGrid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES / WHY CHOOSE US ============ -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pourquoi nous choisir</span>
+                <h2>Ray-Ly-Car, la <span class="highlight">confiance</span> au volant</h2>
+                <p class="section-desc">Nous mettons tout en œuvre pour vous offrir une expérience de location exceptionnelle.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tag"></i></div>
+                    <h3>Meilleurs tarifs garantis</h3>
+                    <p>Profitez de prix compétitifs toute l'année avec des offres promotionnelles exclusives pour nos clients fidèles.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Assurance complète</h3>
+                    <p>Tous nos véhicules sont couverts par une assurance tous risques. Roulez l'esprit tranquille où que vous alliez.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Support 24/7</h3>
+                    <p>Notre équipe est disponible jour et nuit pour répondre à vos questions et vous assister en cas de besoin.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-rotate"></i></div>
+                    <h3>Annulation payée</h3>
+                    <p>Changez d'avis ? Annulez votre réservation de remboursement payé   10% jusqu'à 48h avant la prise en charge du véhicule.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Livraison partout</h3>
+                    <p>Recevez votre véhicule où vous voulez : aéroport, gare, hôtel ou directement à votre domicile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-car-battery"></i></div>
+                    <h3>Véhicules récents</h3>
+                    <p>Notre flotte est composée de véhicules récents, régulièrement entretenus pour votre sécurité et votre confort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FULL FLEET WITH FILTERS ============ -->
+    <section class="section fleet" id="fleet">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre flotte</span>
+                <h2>Trouvez le <span class="highlight">véhicule idéal</span></h2>
+                <p class="section-desc">Filtrez par catégorie pour découvrir notre large sélection de voitures.</p>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="economique">Économique</button>
+                <button class="filter-btn" data-filter="berline">Berline</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="luxe">Luxe</button>
+                <button class="filter-btn" data-filter="utilitaire">Utilitaire</button>
+            </div>
+
+            <div class="cars-grid" id="fleetGrid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple & rapide</span>
+                <h2>Comment ça <span class="highlight">marche</span> ?</h2>
+                <p class="section-desc">Louez votre voiture en 3 étapes simples.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Réservez en ligne</h3>
+                    <p>Choisissez votre véhicule, vos dates et votre lieu de prise en charge en quelques clics.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-key"></i></div>
+                    <h3>Récupérez les clés</h3>
+                    <p>Présentez-vous à l'agence ou optez pour la livraison. Notre équipe vous remet les clés rapidement.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-road"></i></div>
+                    <h3>Profitez de la route</h3>
+                    <p>Conduisez en toute sérénité. Notre support est disponible 24h/24 pour vous accompagner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2>Ce que disent nos <span class="highlight">clients</span></h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Service impeccable ! Voiture propre, récente et confortable. L'équipe a été très professionnelle du début à la fin. Je recommande vivement Ray-Ly-Car."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div>
+                            <h4>Ahmed Mansouri</h4>
+                            <span>Voyageur d'affaires</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"J'ai loué un SUV pour un road trip en famille. Véhicule parfait, kilométrage illimité et tarifs très compétitifs. On repart avec de bons souvenirs !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SB</div>
+                        <div>
+                            <h4>Sophie Benali</h4>
+                            <span>Cliente vacances</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p>"Livraison à l'aéroport ponctuelle, véhicule haut de gamme et processus de réservation ultra simple. Ray-Ly-Car est devenu mon prestataire de confiance."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">YK</div>
+                        <div>
+                            <h4>Yassine Kamal</h4>
+                            <span>Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA SECTION ============ -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <div>
+                <h2>Prêt à prendre la route ?</h2>
+                <p>Réservez maintenant sur votre première location avec le code <strong>BIENVENUE15</strong></p>
+            </div>
+            <a href="#booking" class="btn btn-light">
+                Réserver maintenant <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Parlons de votre <span class="highlight">projet</span></h2>
+                    <p>Notre équipe est à votre écoute pour vous accompagner dans votre location de voiture. Contactez-nous dès maintenant.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Av Al kifah, 1er Étage Appt 12, Diour Al houmer CYM - Rabat</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>06 30 43 23 23 / 06 64 70 92 65</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>raylycar@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lun - Dim : 08h00 - 22h00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TIKTOK"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nom complet</label>
+                                <input type="text" required placeholder="Votre nom">
+                            </div>
+                            <div class="form-group">
+                                <label>Téléphone</label>
+                                <input type="tel" required placeholder="+212 ...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Type de véhicule souhaité</label>
+                            <select>
+                                <option value="">Sélectionnez une catégorie</option>
+                                <option>Économique</option>
+                                <option>Berline</option>
+                                <option>SUV</option>
+                                <option>Luxe</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Dites-nous vos besoins..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="#home" class="logo">
+                        <i class="fa-solid fa-car-side"></i>
+                        <span>Ray-Ly-<strong>Car</strong></span>
+                    </a>
+                    <p>Votre partenaire de confiance pour la location de voitures premium. Roulez avec style, roulez avec Ray-Ly-Car.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TIKTOK"><i class="fa-brands fa-tiktok"></i></a>    
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#fleet">Nos véhicules</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Comment ça marche</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#fleet">Économique</a></li>
+                        <li><a href="#fleet">Berline</a></li>
+                        <li><a href="#fleet">SUV & 4x4</a></li>
+                        <li><a href="#fleet">Luxe</a></li>
+                       
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> Av Al kifah, Diour Al houmer - Rabat</li>
+                        <li><i class="fa-solid fa-phone"></i> 06 30 43 23 23</li>
+                        <li><i class="fa-solid fa-envelope"></i> raylycar@gmail.com</li>
+                        <li><i class="fa-solid fa-clock"></i> 08h - 22h, 7j/7</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ray-Ly-Car. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/212630432323" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toastMsg">Message envoyé !</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
