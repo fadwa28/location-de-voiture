@@ -274,10 +274,33 @@ function initForms() {
     }
 
     if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
+        bookingForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            showToast('Recherche en cours... Véhicules disponibles affichés !');
-            document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' });
+            const submitBtn = bookingForm.querySelector('button[type="submit"]');
+            const originalHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
+
+            try {
+                const response = await fetch(bookingForm.action, {
+                    method: 'POST',
+                    body: new FormData(bookingForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showToast('Votre demande a bien été envoyée ! Nous vous contacterons très vite.');
+                    bookingForm.reset();
+                    document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    showToast('Erreur : la demande n\'a pas pu être envoyée. Merci de réessayer.');
+                }
+            } catch (err) {
+                showToast('Erreur réseau : impossible d\'envoyer la demande.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalHtml;
+            }
         });
     }
 

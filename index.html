@@ -74,11 +74,12 @@
             <!-- Booking Widget -->
             <div class="booking-widget" id="booking">
                 <h3><i class="fa-solid fa-calendar-check"></i> Réservez votre véhicule</h3>
-                <form class="booking-form" id="bookingForm">
+                <form class="booking-form" id="bookingForm" action="https://formspree.io/f/xnppqeyn" method="POST">
+                    <input type="hidden" name="_subject" value="Nouvelle demande de réservation - Ray-Ly-Car">
                     <div class="form-row">
                         <div class="form-group">
                             <label><i class="fa-solid fa-location-dot"></i> Lieu de prise en charge</label>
-                            <select required>
+                            <select required name="lieu_prise_en_charge">
                                 <option value="">Sélectionnez un lieu</option>
                                 <option>Agence Centre-ville</option>
                                 <option>Aéroport International</option>
@@ -88,7 +89,7 @@
                         </div>
                         <div class="form-group">
                             <label><i class="fa-solid fa-location-dot"></i> Lieu de restitution</label>
-                            <select required>
+                            <select required name="lieu_restitution">
                                 <option value="">Même lieu</option>
                                 <option>Agence Centre-ville</option>
                                 <option>Aéroport International</option>
@@ -99,21 +100,21 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label><i class="fa-solid fa-calendar"></i> Date de prise</label>
-                            <input type="date" required id="pickupDate">
+                            <input type="date" required id="pickupDate" name="date_prise">
                         </div>
                         <div class="form-group">
                             <label><i class="fa-solid fa-calendar"></i> Date de retour</label>
-                            <input type="date" required id="returnDate">
+                            <input type="date" required id="returnDate" name="date_retour">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label><i class="fa-regular fa-clock"></i> Heure de prise</label>
-                            <input type="time" required value="10:00">
+                            <input type="time" required value="10:00" name="heure_prise">
                         </div>
                         <div class="form-group">
                             <label><i class="fa-solid fa-car"></i> Catégorie</label>
-                            <select>
+                            <select name="categorie">
                                 <option value="">Toutes catégories</option>
                                 <option>Économique</option>
                                 <option>Berline</option>

@@ -73,6 +73,44 @@ Les données des véhicules se trouvent dans le tableau `cars` du fichier [js/ma
 
 Les coordonnées (adresse, téléphone, email, horaires) sont à modifier dans [index.html](index.html), dans les sections `Contact` et `Footer`.
 
+## Déploiement
+
+Le site est hébergé gratuitement via **GitHub Pages**.
+
+- **Site en ligne** : https://fadwa28.github.io/location-de-voiture/
+- **Dépôt GitHub** : https://github.com/fadwa28/location-de-voiture
+- **Source de publication** : branche `main`, dossier `/ (root)`
+
+### Mettre à jour le site
+
+Depuis le dossier du projet :
+
+```bash
+git add .
+git commit -m "Description de la modification"
+git push
+```
+
+GitHub Pages republie automatiquement le site après chaque `push` sur `main`.
+
+### Domaine personnalisé (optionnel)
+
+Le domaine `ray-ly-car.com` peut remplacer l'adresse `fadwa28.github.io`, à condition de :
+
+1. **Acheter** le domaine chez un registrar (Namecheap, Cloudflare, OVH, GoDaddy…).
+2. Le déclarer dans GitHub : *Settings → Pages → Custom domain* → puis **Save**.
+3. Configurer les DNS chez le registrar :
+
+   | Type | Nom | Valeur |
+   |------|-----|--------|
+   | A | `@` | `185.199.108.153` |
+   | A | `@` | `185.199.109.153` |
+   | A | `@` | `185.199.110.153` |
+   | A | `@` | `185.199.111.153` |
+   | CNAME | `www` | `fadwa28.github.io` |
+
+4. Attendre la propagation DNS (minutes à 24 h), puis cocher **Enforce HTTPS**.
+
 ## Auteurs
 
 Site développé pour **Ray-Ly-Car** — Location de voitures premium.
