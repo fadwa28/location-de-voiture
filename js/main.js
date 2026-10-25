@@ -46,7 +46,7 @@ const cars = [
     },
     {
         id: 4,
-        name: ' 4X4 DASIA STEPWAY',
+        name: ' 4X4 DACIA STEPWAY',
         category: 'Économique',
         categoryLabel: 'Économique',
         price: 300,
