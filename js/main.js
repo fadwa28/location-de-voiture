@@ -22,8 +22,8 @@ const cars = [
     {
         id: 2,
         name: 'CLIO ',
-        category: 'Economique',
-        categoryLabel: 'Economique',
+        category: 'Économique',
+        categoryLabel: 'Économique',
         price: 350,
         seats: 5,
         transmission: 'Manuelle',
@@ -85,7 +85,7 @@ const cars = [
     {
         id: 7,
         name: 'DACIA LOGAN',
-        category: 'berline',
+        category: 'Berline',
         categoryLabel: 'Berline',
         price: 250,
         seats: 5,
