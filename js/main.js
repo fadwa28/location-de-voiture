@@ -22,7 +22,7 @@ const cars = [
     {
         id: 2,
         name: 'CLIO ',
-        category: 'ECONOM',
+        category: 'Economique',
         categoryLabel: 'Economique',
         price: 350,
         seats: 5,
